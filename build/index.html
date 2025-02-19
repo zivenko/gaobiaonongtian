@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>高标农业</title>
+    <script type="module" crossorigin src="./assets/index.js"></script>
+    <link rel="stylesheet" href="./assets/index.css">
+  </head>
+  <body style="margin: 0;padding: 0;overflow: hidden; background-color: #000000; display: flex; justify-content: center; align-items: center;">
+    <div id="app" style="transform-origin: top center;"></div>
+    
+  </body>
+
+  <script>
+    function resizeApp() {
+        const app = document.getElementById('app');
+        const designWidth = 3840; // 原始宽度
+        const designHeight = 2160; // 原始高度
+        // 当前窗口宽高
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        // 计算缩放比例
+        const scaleX = windowWidth / designWidth;
+        const scaleY = windowHeight / designHeight;
+        const scale = Math.min(scaleX, scaleY); // 保证内容完整显示
+
+        // 应用缩放
+        app.style.transform = `scale(${scale})`;
+        console.log(`Scale: ${scale}, Width: ${windowWidth}, Height: ${windowHeight}`);
+    }
+
+    // 初始化调整
+    resizeApp();
+
+    // 监听窗口变化
+    window.addEventListener('resize', resizeApp);
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+body {
+  /* background-color: black; */
+
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+
+  
+  overflow: hidden;
+  scrollbar-width:none;
+  background-color: black;
+}
+
+.background-container {
+  position: relative;
+  /* width: 1920px;
+  height: 1080px; */
+
+  width: 3840px;
+  height: 2160px;
+
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  
+}
+
+.clickable-button {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  border: 0;
+  /* border: rgb(255, 0, 0) solid 1px; */
+}
